@@ -1,8 +1,8 @@
-/*******************Implemented in: Visual Studio C++, Boost C++ ; Microcontroller Target: PIC16F88**************************/
+/*******************Implemented in: Visual Studio C++, Boost C++ ; Microcontroller Target: PIC (also ported for ARM microprocessor) **************************/
 /* Author: Jubayer Ahmed
 Email: cajubuvic@gmail.com
 Phone: 7783175067
-*/
+***********************************************************************************************************************************/
 
 
 #include <system.h>
