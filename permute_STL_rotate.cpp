@@ -32,7 +32,7 @@ void permute(string str, string out)
 
     // One be one move all characters at
     // the beginning of out (or result)
-	for(int i = 0; i < str.size(); i++)
+	for(unsigned int i = 0; i < str.size(); i++)
 	{
 		//Remove first character from str and add it to out
 		permute(str.substr(1), out + str[0]);
@@ -42,16 +42,8 @@ void permute(string str, string out)
 	}
 }
 
-int main()
-{
-	string str = "ABC";
-
-	permute(str, "");
-
-	return 0;
-}
-
 /*
+permute function produces for input: ABC
 ABC
 ACB
 BCA
@@ -59,3 +51,43 @@ BAC
 CAB
 CBA
 */
+
+/*We can use next_permute() that modifies a string so that it stores lexicographically next permutation.
+If current string is lexicographically largest, i.e., “CBA”, then next_permute() returns false.
+We first sort the string, so that it is converted to lexicographically smallest permutation.
+Then we one by one call next_permutation until it returns false.
+*/
+//Print all permutations with duplicates allowed using next_permute()
+void permute_using_next_permutation(string str)
+{
+	//Sort the string in lexicographically ascending order
+	sort(str.begin(), str.end());
+
+	//Keep printing next permutation while there is next permutation
+	do {
+		cout << str << endl;
+	}while (next_permutation(str.begin(), str.end()));
+}
+/*
+For input: CBA
+ABC
+ACB
+BCA
+BAC
+CAB
+CBA
+Note that the second method always prints permutations in lexicographically sorted order irrespective of input string.
+ */
+
+int main()
+{
+	string str = "ABC";
+
+	permute(str, "");
+
+	str = "CBA";
+
+	permute_using_next_permutation(str);
+
+	return 0;
+}
