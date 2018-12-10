@@ -6,6 +6,25 @@
 
 using namespace std;
 
+//This code splits lines from text, and add everyone into a vector.
+
+vector<string> split(char *phrase, string delimiter){
+    vector<string> list;
+    string s = string(phrase);
+    size_t pos = 0;
+    string token;
+    while ((pos = s.find(delimiter)) != string::npos) {
+        token = s.substr(0, pos);
+        list.push_back(token);
+        s.erase(0, pos + delimiter.length());
+    }
+    list.push_back(s);
+    return list;
+}
+//Called by:
+
+//vector<string> listFilesMax = split(buffer, "\n");
+
 void number_line_parse(void)
 {
 	  std::string stringvalues = "125 320 512 750 333";
