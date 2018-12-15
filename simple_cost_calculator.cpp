@@ -13,6 +13,25 @@ void solve(double meal_cost, int tip_percent, int tax_percent) {
   cout << total_cost << endl;
 }
 
+void even_number_Day3()
+{
+    int N;
+    cin >> N;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    if(N%2 != 0) {
+        cout << "Weird\n";
+    }
+    else if(N%2 == 0 && (N>=2 && N<=5)) {
+        cout << "Not Weird\n";
+    } else if (N % 2 == 0 && (N >= 6 && N <= 20)) {
+      cout << "Weird\n";
+    } else if (N % 2 == 0 && (N > 20)) {
+      cout << "Not Weird";
+    }
+}
+
+
 int main()
 {
     double meal_cost;
@@ -28,6 +47,8 @@ int main()
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     solve(meal_cost, tip_percent, tax_percent);
+  
+    even_number_Day3();
 
     return 0;
 }
