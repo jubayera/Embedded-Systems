@@ -20,6 +20,24 @@ short CountBits(unsigned int x)
   return num_bits;
 }
 
+/* Parity of a binary word is 1 if the number of 1s in the word is odd; otherwise, it is 0. Parity checks are used to detect
+single bit errors. Computing parity of a single 64-bit word.
+Iteratitvely tests the value of each bit while tracking the number of 1s seen so far. Since we only care if the number of 1s
+is even or odd, we can store the number mod 2. The complexity if O(n), where n is the word size.
+*/
+short Parity(unsigned long x)
+{
+    short result = 0;
+
+    while(x)
+    {
+        result ^= (x & 1);
+        x >>= 1;
+    }
+
+    return result;
+}
+
 int main(int argc, char const *argv[])
 {
   cout << 5 << " has " << CountBits(5) << " number of 1s" << endl;
