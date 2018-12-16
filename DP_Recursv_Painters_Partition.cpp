@@ -149,3 +149,8 @@ int main()
     cout << "Using DP: " << findMax(arr, n, k) << endl;
     return 0;
 }
+
+/*
+Using recursion: 90
+Using DP: 90
+*/
