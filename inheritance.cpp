@@ -34,8 +34,7 @@ class Student :  public Person{
         *   id - An integer denoting the Person's ID number.
         *   scores - An array of integers denoting the Person's test scores.
         */
-        Student(string firstName,string lastName,int id,vector<int> scores): 
-                    Person(firstName, lastName, id) {
+        Student(string firstName,string lastName,int id,vector<int> scores) : Person(firstName, lastName, id) {
 
             this->testScores = scores;
         }
