@@ -40,8 +40,8 @@ short Parity(unsigned long x)
 
 int main(int argc, char const *argv[])
 {
-  cout << 5 << " has " << CountBits(35) << " number of 1s" << endl;
-  cout << 4 << " has " << CountBits(44) << " number of 1s" << endl;
+  cout << 35 << " has " << CountBits(35) << " number of 1s" << endl;
+  cout << 44 << " has " << CountBits(44) << " number of 1s" << endl;
   cout << 15 << " has " << Parity(15) << " parity" << endl;
   cout << 25 << " has " << Parity(25) << " parity" << endl;
   return 0;
