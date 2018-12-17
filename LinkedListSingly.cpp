@@ -134,7 +134,7 @@ int main()
   append(&head, 4); 
   
   // Insert 8, after 7. So linked list becomes 1->7->8->6->4->NULL 
-  insertAfter(head->next, 8); 
+  insertAfter(head->next, 8); //head points to 1, so head->next points to 7
   
   printf("\n Created Linked list is: "); 
   printList(head); 
