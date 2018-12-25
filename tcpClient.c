@@ -18,6 +18,8 @@ void main(int argc, char const *argv[])
 
     clientSocket = socket(PF_INET, SOCK_STREAM, 0);
 
+    printf("[+]Client Socket Created Successfully\n");
+
     memset(&serverAddr, '\0', sizeof(serverAddr));
 
     serverAddr.sin_family = AF_INET;
@@ -25,9 +27,11 @@ void main(int argc, char const *argv[])
     serverAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
 
     connect(clientSocket, (struct sockaddr*)&serverAddr, sizeof(serverAddr));
+    printf("[+]Connected to the Server\n");
 
     recv(clientSocket, buffer, 1024, 0);
-    printf("Data Received: %s", buffer);
+    printf("[+]Data Received: %s\n", buffer);
+    printf("[+]Closing the connection");
 
 }
 /*
