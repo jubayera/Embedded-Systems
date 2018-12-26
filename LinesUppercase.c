@@ -14,6 +14,18 @@ char lower_to_upper(char c1) //function definition
     return(c2);
 }
 
+long int factorial(int n) //calculate the factorial of n
+{
+    int i;
+    long int prod = 1;
+
+    if(n > 1)
+        for(i = 2; i <= n; ++i)
+            prod *= i;
+
+    return(prod);
+}
+
 int main(int argc, char const *argv[])
 {
     char lower, upper;
