@@ -310,21 +310,3 @@ int main() {
     
 }
 The function is very useful because it if the size of the vector is "n", then it finds the element in the sorted vector in O(logn) time!.
-
-Questions
-Search for a question:
-Search for a question
-4 questions in this lecture
-
-SP
-vector declaration
-    vector<AnimalNumber> v(100,AnimalNumber(10));this defines that vector v has 100 elements but what is the meaning of AnimalNumber(10)?
-IM
-push_back on a vector
-Code Snippet: #include <iostream> #include <vector> using namespace std;  int main() { vector<bool> v; v.push_back(1); v.push_back(2); return 0; } In your code snippet in the lesson about vectors, you use push_back which pushes 1 and 2 inside the vector of bool, how is it possible as bool takes only true or false right? kindly help me out with this.
-MA
-Why we use Animal number(10)
-NN
-How comparator works ?
-in operator method, each element is compared with all other elements for comparison ? 
-Question Details
