@@ -4,6 +4,20 @@
 #include <algorithm> //for sort()
 using namespace std;
 
+/*
+vector<int> oddNumbers(int l, int r) { 
+    
+    vector<int> oddNumVec;
+
+    for(int i = l; i <= r; i++) {
+        if(i%2 != 0)
+            oddNumVec.push_back(i);
+    }
+
+    return oddNumVec;
+}
+*/
+
 int main()
 {
     //Initializing 2D vector 'vect' with values
