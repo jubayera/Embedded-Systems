@@ -4,7 +4,6 @@
 #include <algorithm> //for sort()
 using namespace std;
 
-/*
 vector<int> oddNumbers(int l, int r) { 
     
     vector<int> oddNumVec;
@@ -16,7 +15,6 @@ vector<int> oddNumbers(int l, int r) {
 
     return oddNumVec;
 }
-*/
 
 int main()
 {
