@@ -1,4 +1,4 @@
-#include "Jubayer_OSI-Maritime.h"
+#include "header.h"
 
 struct Node* head = NULL; //pointer to head of the linked list
 
@@ -184,7 +184,7 @@ int main()
 	return 0;
 }
 
-Corresponding header file:
+Corresponding header file: header.h
 --------------------------
 #include <iostream>
 #include <stdio.h>
