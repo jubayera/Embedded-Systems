@@ -31,7 +31,7 @@ class Solution {
                 if((2 * N % i) != 0)
                     continue;
                 
-                int x = (2 * N / i) - i -1;
+                int x = (2 * N / i) - i - 1;
 
                 if(x % 2 == 0 && x >= 0) {
                     result++;
